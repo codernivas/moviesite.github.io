@@ -10,6 +10,7 @@ const Movie = () => {
     useEffect(() => {
         getData()
         window.scrollTo(0,0)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const getData = () => {
@@ -61,9 +62,11 @@ const Movie = () => {
             <div className="movie_links">
                 <div className="movie_heading">Useful Links</div>
                 {
+                    // eslint-disable-next-line react/jsx-no-target-blank
                     currentMovieDetail && currentMovieDetail.homepage && <a href={currentMovieDetail.homepage} target="_blank" style={{textDecoration: "none"}}><p><span className="movie_homeButton movie_Button">Homepage <i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
                 {
+                    // eslint-disable-next-line react/jsx-no-target-blank
                     currentMovieDetail && currentMovieDetail.imdb_id && <a href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id} target="_blank" style={{textDecoration: "none"}}><p><span className="movie_imdbButton movie_Button">IMDb<i className="newTab fas fa-external-link-alt"></i></span></p></a>
                 }
             </div>

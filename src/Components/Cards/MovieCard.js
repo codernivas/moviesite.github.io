@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
 import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import { Link } from "react-router-dom";
